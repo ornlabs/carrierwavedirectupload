@@ -1,0 +1,9 @@
+Number of ratings: <%= @ratings.count %> <br/><br/>
+
+<ul>
+
+<% @ratings.each do |rating| %>
+  <li><a href="<%= rating_path(rating) %>"><%= rating.id %> - <%= rating.description %></a></li>
+<% end %>
+
+</ul>
